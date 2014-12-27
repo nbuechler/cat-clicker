@@ -8,32 +8,64 @@
 </head>
 
 <style>
-
-
-</style>    
+    .meows {
+        width: 300px;
+        margin: 10px;
+    }
     
+    #catInfo {
+        float: left;
+    }
+    
+    #kitInfo {
+        float: right;
+    }
+</style>
+
 <body style="padding: 5%; text-align: center;">
 
     <h1>Click a picture of a cat and increment!</h1>
-    <div><h3>Increment:</h3><h2 id="incr">0</h2></div>
+    <div style="padding: 5%; text-align: center;">
+        <div id="catInfo">
+            <h3 id="catTitle">Increment:</h3>
+            <h2 id="catIncr">0</h2>
+        </div>
+        <div id="kitInfo">
+            <h3 id="kitTitle">Increment:</h3>
+            <h2 id="kitIncr">0</h2>
+        </div>
+    </div>
     <br></br>
-    <div><img id="cat" src="img/cat.png"></img></div>
-    
+    <div>
+        <img class="meows" id="cat" src="img/cat.png"></img>
+        <img class="meows" id="kit" src="img/kit.png"></img>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 
 </body>
 
 <script type="text/javascript">
-    
-    var incr = 0;
+    var carIncr = 0,
+        catName = "Celestial Whisker",
+        kitIncr = 0,
+        kitName = "King Feline"
+
+    $('#catTitle').text(catName + "'s Increment");
     
     $('#cat').on('click', function () {
-        incr++;
-        $('#incr').text(incr);
+        carIncr++;
+        $('#catIncr').text(carIncr);
     });
     
-</script>    
+    $('#kitTitle').text(kitName + "'s Increment");
+    
+    $('#kit').on('click', function () {
+        kitIncr++;
+        $('#kitIncr').text(kitIncr);
+    });
+</script>
 
 
 </html>
