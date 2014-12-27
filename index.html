@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cat Clicker</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+</head>
+
+<style>
+
+
+</style>    
+    
+<body style="padding: 5%; text-align: center;">
+
+    <h1>Click a picture of a cat and increment!</h1>
+    <div><h3>Increment:</h3><h2 id="incr">0</h2></div>
+    <br></br>
+    <div><img id="cat" src="img/cat.png"></img></div>
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+</body>
+
+<script type="text/javascript">
+    
+    var incr = 0;
+    
+    $('#cat').on('click', function () {
+        incr++;
+        $('#incr').text(incr);
+    });
+    
+</script>    
+
+
+</html>
